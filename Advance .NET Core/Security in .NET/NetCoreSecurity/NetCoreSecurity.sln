@@ -8,7 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cryptography", "Cryptograph
 		README.txt = README.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSAAlgo", "..\RSAAlgo\RSAAlgo.csproj", "{C4357AF1-A6A5-40C3-89F0-34F6C394900C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSA_withCertificates", "..\RSAAlgo\RSA_withCertificates.csproj", "{C4357AF1-A6A5-40C3-89F0-34F6C394900C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
