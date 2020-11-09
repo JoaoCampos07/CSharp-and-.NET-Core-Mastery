@@ -17,3 +17,7 @@ rsa specifying that the command will process RSA keys;
 2) How to convert the PEM Keys to a more frindly formate ? 
 R: You can translate them to XML with :
 https://superdry.apphb.com/tools/online-rsa-key-converter
+
+3) What is a PEM key ?
+
+4) What is the PEM format ?
