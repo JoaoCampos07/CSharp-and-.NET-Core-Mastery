@@ -4,10 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.1231
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Delegates", "Delegates", "{90178419-66B4-49C7-BF78-85F839277986}"
+	ProjectSection(SolutionItems) = preProject
+		UserCases.txt = UserCases.txt
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main", "Example\Main.csproj", "{34BAC583-5DF2-47D5-9DC8-F5A69462D130}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Main", "Example\Main.csproj", "{34BAC583-5DF2-47D5-9DC8-F5A69462D130}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateCreatesObj", "DelegateCreatesObj\DelegateCreatesObj.csproj", "{B740900E-16E8-49B6-A5E3-57476A6F3130}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegateCreatesObj", "DelegateCreatesObj\DelegateCreatesObj.csproj", "{B740900E-16E8-49B6-A5E3-57476A6F3130}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

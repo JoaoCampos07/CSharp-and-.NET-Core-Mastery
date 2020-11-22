@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleExamples", "LINQ Mastering\SimpleExamples.csproj", "{10A11356-0F8A-4312-8E4B-D4D67097EB88}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleExamples", "SimpleExamples", "{D4A86546-584D-4C95-B648-D8547BACF8CE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Real-World Examples", "Real-World Examples", "{F8B288A9-2E33-46AE-AB05-7D90163ECECD}"
+	ProjectSection(SolutionItems) = preProject
+		UseCases.txt = UseCases.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10A11356-0F8A-4312-8E4B-D4D67097EB88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10A11356-0F8A-4312-8E4B-D4D67097EB88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10A11356-0F8A-4312-8E4B-D4D67097EB88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10A11356-0F8A-4312-8E4B-D4D67097EB88}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{10A11356-0F8A-4312-8E4B-D4D67097EB88} = {D4A86546-584D-4C95-B648-D8547BACF8CE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4CF5EA44-2A8D-4272-AC18-DE1939C12A9A}
+	EndGlobalSection
+EndGlobal
