@@ -11,7 +11,7 @@ namespace MoshHamenadi
 
             var filters = new PhotoFilters();
             // create delegate
-            PhotoProcessor.PhotoFilterHandler filterHandler = filters.ApplyBrightness;
+            Action<Photo> filterHandler = filters.ApplyBrightness;
             filterHandler += filters.ApplyContrast;
             filterHandler += RemoveRedEye;
 

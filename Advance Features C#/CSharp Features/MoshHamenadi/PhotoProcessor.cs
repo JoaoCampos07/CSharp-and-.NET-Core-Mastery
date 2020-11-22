@@ -11,9 +11,9 @@ namespace MoshHamenadi
         /// Delegate that can hold a reference to a method or a group of methods that contain the below signature.
         /// </summary>
         /// <param name="photo"></param>
-        public delegate void PhotoFilterHandler(Photo photo);
+        //public delegate void PhotoFilterHandler(Photo photo);
 
-        public void Process(string path, PhotoFilterHandler filterHandler)
+        public void Process(string path, Action<Photo> filterHandler)
         {
             var photo = Photo.Load(path);
 
