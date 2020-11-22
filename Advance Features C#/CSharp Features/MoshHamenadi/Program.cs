@@ -1,12 +1,14 @@
-﻿using System;
+﻿using MoshHamenadi.Model;
+using System;
 
 namespace MoshHamenadi
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var photo = new PhotoProcessor();
+            photo.Process("somePath");
         }
     }
 }
