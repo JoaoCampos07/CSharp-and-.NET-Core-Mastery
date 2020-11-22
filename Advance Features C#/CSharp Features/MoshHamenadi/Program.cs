@@ -7,8 +7,25 @@ namespace MoshHamenadi
     {
         public static void Main(string[] args)
         {
-            var photo = new PhotoProcessor();
-            photo.Process("somePath");
+            var photoProcessor = new PhotoProcessor();
+
+            var filters = new PhotoFilters();
+            // create delegate
+            PhotoProcessor.PhotoFilterHandler filterHandler = filters.ApplyBrightness;
+            filterHandler += filters.ApplyContrast;
+            filterHandler += RemoveRedEye;
+
+            photoProcessor.Process("photo.png", filterHandler);
+        }
+        
+        /// <summary>
+        /// This function was not release with the Nuget or framework....
+        /// But since is extensible, I, was user of the obj can create my own.
+        /// </summary>
+        /// <param name="photo"></param>
+        public static void RemoveRedEye(Photo photo)
+        {
+            Console.WriteLine("Apply Remove Red eye.");
         }
     }
 }
