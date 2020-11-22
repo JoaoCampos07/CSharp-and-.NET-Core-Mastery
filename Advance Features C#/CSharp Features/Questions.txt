@@ -1,0 +1,14 @@
+
+
+What is a delegate ? 
+R: A deleaget is a object that knows how to call a method (or a group of methods). 
+Or a delegate is a reference or a pointer, to a function.
+
+Why do we need delegates ? 
+R: We can call methods directly, why do we want a delegate that is responsible to call methods for us. 
+Well, this technique allow us to create applications that are extensible and flexible. Often is used to design frameworks.
+
+Why delegates are usefull ? 
+R: Delegates are useful to offer to the user of your objects some ability to customize their behavior. Most of the time,
+you can use other ways to achieve the same purpose and I do not believe you can ever be forced to create delegates. 
+It is just the easiest way in some situations to get the thing done.
