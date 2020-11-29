@@ -1,0 +1,5 @@
+1 Case : 
+For example, I have a Base Controller that is responsible to process every request that comes from every child controller. 
+For that child controllers should use : ProcessQueryAsync() or ProcessCommandAsync().
+In this base controller, is a nuget, but the devs that use this Nuget would like to be able to configure some callback that would be call, IF the request is process
+sucessfully. So... :
