@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+/*
+Example here we handle the exponent of two for a list of numbers in two ways : using Yield and a Enumerator or Not 
+ In the first case : 
+  1. I do a loop to compute the power of two of every number 
+  2. I do a loop to print each number
+  This is O(30)
+
+In the second case : 
+  1. I do a loop, i will compute the power of two of first number and printed in the console. (I will do the operations once) 
+     , them grab next one and next one and so on...
+  This is O(15)
+
+*/
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        private static int[] numbers = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
+
+        static void Main( string[] args )
+        {
+            // without Yield...
+            var numbers = ExponentOfTwo();
+
+            for ( int i = 0; i < numbers.Length; i++ ) // I do for loops so O(15) + O(15)
+            {
+                Console.WriteLine( numbers[i] );
+            }
+
+            // using Yield..
+            foreach ( var item in ExponentOfTwo_withEnumerator() ) // O(15)
+            {
+                Console.WriteLine( item );
+            }
+        }
+
+        public static IEnumerable<int> ExponentOfTwo_withEnumerator()
+        {
+            foreach ( var item in numbers )
+            {
+                yield return item * item; // we use yield method and we dont need to create that holds the state of the enumerator. In which position is at etc...
+            }
+        }
+
+        public static int[] ExponentOfTwo()
+        {
+            var powerOfTwo = new int[numbers.Length];
+
+            for ( int i = 0; i < numbers.Length; i++ )
+            {
+                powerOfTwo[i] = numbers[i] * numbers[ i ];
+            }
+
+            return powerOfTwo;
+        }
+    }
+}
