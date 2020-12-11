@@ -1,3 +1,5 @@
+// 1 CASE 
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -58,3 +60,30 @@ namespace Delegates
 
     }
 }
+
+
+// 2 CASE : Just to have the code together : 
+
+    /// <summary>
+        /// Adds MVC services to the specified <see cref="IServiceCollection" />.
+        /// </summary>
+        /// <param name="services">The <see cref="IServiceCollection" /> to add services to.</param>
+        /// <param name="setupAction">An <see cref="Action{MvcOptions}"/> to configure the provided <see cref="MvcOptions"/>.</param>
+        /// <returns>An <see cref="IMvcBuilder"/> that can be used to further configure the MVC services.</returns>
+        public static IMvcBuilder AddMvc(this IServiceCollection services, Action<MvcOptions> setupAction)
+        {
+            if (services == null)
+            {
+                throw new ArgumentNullException(nameof(services));
+            }
+
+            if (setupAction == null)
+            {
+                throw new ArgumentNullException(nameof(setupAction));
+            }
+
+            var builder = services.AddMvc();
+            builder.Services.Configure(setupAction);
+
+            return builder;
+        }
