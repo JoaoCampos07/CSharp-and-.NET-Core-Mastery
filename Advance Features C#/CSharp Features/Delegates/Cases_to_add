@@ -1,0 +1,60 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Delegates
+{
+    class Program
+    {
+        static void Main( string[] args )
+        {
+            // I, client of the API, want to apply whatever i want to a number and pass to the Nuget.
+            // how to do that 
+
+            var numbers = new double[] { 0.0, 1.5, 1.0 };
+
+            var computedNumbers1 = Apply( numbers, ExponentOfTwo);
+
+            foreach ( var item in computedNumbers1 )
+                Console.WriteLine(item);
+        }
+
+
+        /// <summary>
+        /// There is some common code that will always happen. 
+        /// Because there is some code that be customized by the person who use's the API.
+        /// This is the computing operations that should be realized. In this case.
+        /// </summary>
+        /// <param name="numbers"></param>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        private static double[] Apply( double[] numbers, Func<double,double> action )
+        {
+            // do some stuff 
+            var computedNumbers = new double[ numbers.Length ];
+
+            // Invoke delegate - realize operation : Square, pow whatever
+            for ( int i = 0; i < numbers.Length; i++ )
+            {
+                computedNumbers[ i ] = action.Invoke(numbers[ i ]);
+            }
+
+            //return something
+            return computedNumbers;
+        }
+
+        // I want to apply these numbers some operations :
+        // Power of tow 
+        // Square
+        // Sines
+        // Multiply
+        public static double ExponentOfTwo( double input )
+            => input * input;
+
+        public static double Square( double input )
+            => Math.Sqrt( input );
+
+    }
+}
