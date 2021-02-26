@@ -34,8 +34,8 @@ namespace SimpleYieldExample
 // Each iteration in Foreach in Main() makes a call to the Power method
 
 // What the yield word do ? 
-// R: Indicates that the method where is used, is a Iterator. 
-// This removes a necessity for a extra class (A class that holds the state of the enumeration.)
+// R: Indicates that the method here used, is a Iterator. 
+// This removes a necessity for a extra class (A class that holds the state of the enumeration).
 
 // Why we use the yield return statement ? 
-// R: We use it to return one element at time.
+// R: We use it to return one element at time, in a lazy iteration kind of way.
