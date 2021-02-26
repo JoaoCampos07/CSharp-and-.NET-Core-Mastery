@@ -16,6 +16,7 @@ In the second case :
      , them grab next one and next one and so on...
   This is O(15)
 
+The separation of operations is crucial to decide if you should use the yield keyword.
 */
 
 namespace ConsoleApp1
