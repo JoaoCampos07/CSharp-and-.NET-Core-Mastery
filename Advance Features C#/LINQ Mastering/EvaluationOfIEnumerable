@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+					
+public class Program
+{
+	public static void Main()
+	{
+		List<int> test = new List<int>(){ 1};
+		
+		var result = test.Select(x => {
+		Console.WriteLine("Select executed for " + x);
+			return x;
+		});
+		
+		result.All(x=> x%2 ==1);
+		
+		result.All(x=> x%2 ==2);
+		
+		result.All(x=> x%2 ==3);
+		
+		var list = result.ToList();
+		
+		Console.WriteLine("IEnumerable changed to List - logic should not be repeated.");
+		
+		list.All(x=> x%2 ==1);
+		
+		list.All(x=> x%2 ==2);
+		
+		list.All(x=> x%2 ==3);
+	
+    // As we can see the filtering logic is apply multiple times when we have IEnumerable 
+    // But when we force the evalationn of it is different. It is only executed once...dont know why.... 
+	}
+}
