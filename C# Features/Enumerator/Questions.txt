@@ -1,0 +1,4 @@
+﻿Questions  : 
+     Why on the foreach the we go to the GetEnumerator() method ?
+     R: Because is part of the People implementation, as soon we do foreach 
+     we are grabing the next Person and also Move next automatically

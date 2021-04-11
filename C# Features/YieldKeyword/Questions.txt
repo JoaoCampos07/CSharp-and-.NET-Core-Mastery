@@ -1,0 +1,36 @@
+﻿
+Questions : 
+
+    When I should use the Yiedl Keyword ? 
+     R: If i see that i have two distinct operations like compute power of two of all numbers and them print in console 
+       I can do this in O(n) with the yeidl keyword.
+
+    What the yield word do ? 
+     R: Indicates that the method used is a Iterator. 
+       This removes a necessity for a extra class (A class that holds the state of the enumeration, in which position we are etc...).
+
+    Why we use the yield return statement ? 
+     R: We use it to return one element at time, in a lazy iteration kind of way.
+
+Remarks :      
+    For the first example 
+        We handle the exponent of two for a list of numbers in two ways : using Yield and a Enumerator or Not 
+         In the first case : 
+          1. I do a loop to compute the power of two of every number 
+          2. I do a loop to print each number
+          This is O(30)
+
+    In the second case : 
+      1. I do a loop, i will compute the power of two of first number and printed in the console. (I will do the operations once) 
+         , them grab next one and next one and so on...
+      This is O(15)
+    Each iteration in Foreach in Main() makes a call to the Power method
+
+    The separation of operations is crucial to decide if you should use the yield keyword.
+
+
+
+
+
+
+
