@@ -2,12 +2,14 @@
 Questions : 
 
     When I should use the Yiedl Keyword ? 
-     R: If i see that i have two distinct operations like compute power of two of all numbers and them print in console 
+     R: If i see that i have two distinct operations like compute power of two of all numbers and them print them in console 
        I can do this in O(n) with the yeidl keyword.
+       I can also do it in O(n) in a "merged" foreach but i will disrespect the Single Responsability Principle.
 
     What the yield word do ? 
      R: Indicates that the method used is a Iterator. 
        This removes a necessity for a extra class (A class that holds the state of the enumeration, in which position we are etc...).
+       Is the space of concept used in Linked Lists.
 
     Why we use the yield return statement ? 
      R: We use it to return one element at time, in a lazy iteration kind of way.
@@ -26,7 +28,18 @@ Remarks :
       This is O(15)
     Each iteration in Foreach in Main() makes a call to the Power method
 
-    The separation of operations is crucial to decide if you should use the yield keyword.
+    **** The separation of operations is crucial to decide if you should use the yield keyword.
+
+Drawbacks: 
+ The return type must be IEnumerable, IEnumerable<T>, IEnumerator, or IEnumerator<T>. So, no Dictionary<K,T> or HashSets<K>. But I can return tupples ! 
+ You can't include a yield return or yield break statement in:
+
+ Lambda expressions and anonymous methods.
+
+ More info : 
+    https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/yield
+    https://docs.microsoft.com/en-us/dotnet/csharp/iterators
+
 
 
 
